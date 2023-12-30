@@ -1,0 +1,35 @@
+ taxonomy:
+  - name: book
+    # singular: book    # optional
+    # plural: books     # optional
+    description: 'taxonomy for books'   # optional
+    public: true
+    hierarchical: true
+    # show_ui: true             # takes value from public optional
+    # show_in_rest: true        # optional
+    # show_admin_column: true   # optional
+    # show_in_nav_menus: true   # optional
+    show_tagcloud: false        # optional
+    # default_term:             # optional
+    #   name: 'all'
+    #   slug: 'all'
+    #   description: 'default term if uncategorized'
+    # rewrite:                  # optional
+    #   slug: 'books-category'
+  - name: book-tag
+    # singular: book
+    # plural: books
+    # description: 'tag taxonomy for books'
+    public: true
+    hierarchical: false
+    # show_ui: true             # optional
+    # show_in_rest: true
+    # show_admin_column: true
+    # show_in_nav_menus: true
+    # show_tagcloud: true
+    # default_term:
+    #   name: 'all'
+    #   slug: 'all'
+    #   description: 'default term if uncategorized'
+    # rewrite:
+    #   slug: 'books-tag'

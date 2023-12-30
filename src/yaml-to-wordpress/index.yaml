@@ -1,0 +1,223 @@
+settings_page:
+  - name: 'all test'
+    prefix: alltest
+    tabs:
+      - name: 'Notification tab'
+        fields:
+          - type: text
+            name: welcome
+            required: true
+            help: fill me, fille me fast!
+            default: hello
+            width: 50
+      - name: 'Profile tab'
+        fields:
+          - type: complex         # nested repeater field
+            name: slides
+            prefix: alltest       # optional
+            option:
+              duplicates_allowed: true
+            fields:
+              - type: image
+                name: image
+              - type: complex
+                name: slide_fragments
+                fields:
+                  - type: text
+                    name: fragment_text
+                  - type: select
+                    name: fragment_position
+                    options:
+                      - 'Top Left'
+                      - 'Top Right'
+                      - 'Bottom Left'
+                      - 'Bottom Right'
+          - type: association
+            name: association
+            options:
+              min: 5
+              max: 5
+              duplicates_allowed: true
+              types:
+                - type: post
+                  post_type: page
+                - type: post
+                  post_type: post
+                - type: term
+                  taxonomy: category
+                - type: term
+                  taxonomy: post_tag
+                - type: user
+                - type: comment
+          - type: checkbox
+            name: show_content
+            label: Show content
+            options:
+              value: yes
+          - type: color
+            name: background
+            label: Background
+            options:
+              alpha_enabled: true
+              palette:
+                - '#FF0000'
+                - '#00FF00'
+                - '#0000FF'
+          - type: date
+            name: event_start_date
+            label: 'Event Start Date'
+            options:
+              placeholder: 'Date of event start'
+              storage_format: 'Y-m-d'
+              input_format:
+                - 'F Y'  # php (on backend on storage)
+                - 'M Y'  # js (on frontend in input displayed)
+              picker_options:
+                weekNumbers: true
+          - type: date_time
+            name: event_date_time
+            label: 'Event Date Time'
+            options:
+              placeholder: 'Choose the time'
+              storage_format: 'Y-m-d'
+              input_format:
+               - 'F Y' # php (on backend on storage)
+               - 'M Y' # js (on frontend in input displayed)
+              picker_options:
+               weekNumbers: true
+          - type: file
+            name: file
+            label: 'File'
+            options:
+              value_type: 'url'
+              types:
+                - 'audio'
+                - 'image'
+          - type: footer_scripts
+            name: footer_scripts
+            label: 'Footer Scripts'
+          - type: gravity_form
+            name: gravity_form
+            label: 'Select a Form'
+          - type: header_scripts
+            name: header_scripts
+            label: 'Header Scripts'
+            options:
+              hook_name: 'wp_print_scripts'
+              hook_priority: 11
+              hook: 'wp_print_scripts'
+          - type: hidden
+            name: hidden_field
+            label: 'Hidden field'
+            options:
+              data: hidden-field-data
+          - type: html  # use this as information or static field
+            name: information_text
+            label: html information
+            html: '<h2>This is some information in html format</h2><p>Quisque mattis ligula.</p>'
+          - type: image
+            name: image
+            label: 'Image'
+            options:
+              value_type: 'url'
+              types:
+                - video
+                - image
+                - audio
+          - type: map
+            name: map
+            label: 'Map'
+            position: 37.423156, -122.084917, 14
+          - type: media_gallery
+            name: media_gallery
+            label: 'Media Gallery'
+            options:
+              types:
+                - image
+                - video
+              duplicates_allowed: false
+          - type: multiselect
+            name: available_colors
+            label: 'Available Colors'
+            options:
+              red: 'Red'
+              green: 'Green'
+              blue: 'Blue'
+          - type: oembed
+            name: oembed
+            label: 'oEmbed'
+          - type: radio
+            name: radio_example
+            label: 'Available Colors'
+            options:
+              red: 'Red'
+              green: 'Green'
+              blue: 'Blue'
+          - type: radio_image
+            name: background_image
+            label: 'Choose Background Image'
+            options:
+              mountain: 'https://source.unsplash.com/X1UTzW8e7Q4/800x600'
+              temple: 'https://source.unsplash.com/ioJVccFmWxE/800x600'
+              road: 'https://source.unsplash.com/5c8fczgvar0/800x600'
+          - type: rich_text
+            name: content
+            label: Content
+            conditional_logic:
+              - field: show_content
+                value: true
+          - type: select
+            name: select_example
+            label: 'Available Colors'
+            options:
+              red: 'Red'
+              green: 'Green'
+              blue: 'Blue'
+          - type: separator
+            name: separator
+            label: 'its just separator'
+          - type: set
+            name: set_example
+            label: 'Available Colors'
+            options:
+              red: 'Red'
+              green: 'Green'
+              blue: 'Blue'
+          - type: sidebar
+            name: custom_sidebar
+            label: 'Select a Sidebar'
+            exclude: default-sidebar
+          - type: text
+            name: phone_number
+            label: 'Phone Number'
+            options:
+              placeholder: '(***) ***-****'
+              maxLength: 10
+              pattern: '^[0-9]{3}-[0-9]{3}-[0-9]{4}$'
+              data: witek
+              type: password
+              readOnly: false
+          - type: text
+            name: 'fiximage_text_2'
+            label: 'Witek jest niesamowity'
+          - type: textarea
+            name: textarea_example
+            label: 'this is textarea'
+            options:
+              placeholder: 'witek jest niesamowity'
+              maxLength: 200
+              minLength: 10
+              data: witek
+              readOnly: false
+              row: 2
+          - type: time
+            name: event_time
+            label: 'This is just time'
+            options:
+              placeholder: 'Choose the time'
+              storage_format: 'Y-m-d'
+              input_format:
+               - 'F Y' # php (on backend on storage)
+               - 'M Y' # js (on frontend in input displayed)
+              picker_options:
+                weekNumbers: true

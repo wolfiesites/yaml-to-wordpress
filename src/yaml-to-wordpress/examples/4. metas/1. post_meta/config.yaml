@@ -1,0 +1,33 @@
+# by default without conditional logic meta will be added in post and pages
+
+post_meta:
+  - name: wolfie metabox
+    prefix: wolfie
+    context: advanced # normal or advanced or carbon_fields_after_title or side
+    priority: high # high, core, default or low
+    or_where: 
+      - state: post_type = page
+    # - state: post_type = post
+    # - state: post_parent_id = 999
+    # - state: post_term = post
+    # - state: post_id = 1
+    # - state: post_level = 2
+    # - state: post_format = 2
+    # - state: post_template = 'templates/my-template.php'
+    # - state: current_user_capability = manage_options                       # limits permissions to view and change
+    # - state: current_user_id = 99                                           # limits permissions to view and change
+    # - state: current_user_role = administrator                              # limits permissions to view and change
+    # where: # where is narrowing or_where is extending
+    # - state: post_type = page
+    # - state: post_parent_id = 999
+    # - state: post_term = post
+    # - state: post_id = 1
+    # - state: post_level = 2
+    # - state: post_format = 2
+    # - state: post_template = 'templates/my-template.php'
+    # - state: current_user_capability = manage_options                       # limits permissions to view and change
+    # - state: current_user_id = 99                                           # limits permissions to view and change
+    # - state: current_user_role = administrator                              # limits permissions to view and change
+    fields:
+      - type: text
+        name: Notification Email

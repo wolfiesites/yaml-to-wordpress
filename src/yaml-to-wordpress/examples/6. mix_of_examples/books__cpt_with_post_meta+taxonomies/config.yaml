@@ -1,0 +1,104 @@
+taxonomy:               # optional: but gives "custom categories and tags for ur cpt"
+  - name: wolfie-book
+    singular: book
+    plural: books
+    public: true
+    hierarchical: true
+    rewrite:
+      slug: wolfie-books-category
+    position_in_menu: 1
+  - name: wolfie-book-tag
+    singular: book
+    plural: books
+    public: true
+    hierarchical: false
+    rewrite:
+      slug: wolfie-books-tag
+    position_in_menu: 1
+
+
+post_meta:
+  - name: wolfie metabox
+    prefix: wolfie
+    # where:                # optional - this narrows the conditional logic
+    # - state: post_type = wolfie-book
+    or_where:               # optional - this extends the conditional logic
+    - state: post_type = wolfie-book
+    - state: post_type = article
+    fields:
+      - type: text
+        name: amazing text
+
+
+term_meta:
+  - name: wolfie metabox
+    prefix: wolfie
+    or_where: 
+      - state: term_taxonomy = wolfie-book
+      # - state: term = uncategorized
+      # - state: term_parent = offer
+      # - state: term_level = 2
+      # - state: term_ancestor = amazing
+      # - state: current_user_capability = manage_options                      # limits permissions to view and change
+      # - state: current_user_id = 99                                          # limits permissions to view and change
+      # - state: current_user_role = administrator                             # limits permissions to view and change
+    # where: # "where" is narrowing, "or_where" is extending 
+      # - state: term = uncategorized
+      # - state: term_parent = offer
+      # - state: term_level = 2
+      # - state: term_ancestor = amazing
+      # - state: term_taxonomy = category
+      # - state: current_user_capability = manage_options                      # limits permissions to view and change
+      # - state: current_user_id = 99                                          # limits permissions to view and change
+      # - state: current_user_role = administrator                             # limits permissions to view and change
+    fields:
+      - type: image
+        name: main image
+
+
+post_type:
+  - name: wolfie-book
+    singular: book    # optional
+    plural: books     # optional
+    taxonomies:       # optional this are only names of already registered taxonomies | it connects post type to taxonomies | taxonomy ealier needs to be declared
+     - wolfie-book
+     - wolfie-book-tag
+    # supports:       # optional
+    #   - editor
+    #   - title
+    #   - thumbnail
+    #   - excerpt
+    show_in_rest: true     # optional turn on / off gutenberg (default true thus gutenberg is on)
+  - name: article
+    show_in_rest: false     # optional turn on / off gutenberg (default true thus gutenberg is on)
+
+
+settings_page:
+  - name: 'wolfie-books-settings'
+    menu_title: settings
+    prefix: wolfie
+    parent: edit.php?post_type=wolfie-book             # optional - adds settings page as submenu to wolfie-book cpt
+    tabs:
+      - name: 'Notification tab'
+        fields:
+          - type: text
+            name: Witek is amazing
+      - name: 'Profile tab'
+        fields:
+          - type: complex         # nested repeater field
+            name: slides
+            fields:
+              - type: image
+                name: image
+              - type: complex
+                name: slide_fragments
+                fields:
+                  - type: text
+                    name: fragment_text
+                  - type: select
+                    name: fragment_position
+                    options:
+                      - 'Top Left'
+                      - 'Top Right'
+                      - 'Bottom Left'
+                      - 'Bottom Right'

@@ -1,0 +1,24 @@
+term_meta:
+  - name: wolfie metabox
+    prefix: wolfie
+    or_where: 
+      - state: term_taxonomy = category
+      # - state: term = uncategorized
+      # - state: term_parent = offer
+      # - state: term_level = 2
+      # - state: term_ancestor = amazing
+      # - state: current_user_capability = manage_options                      # limits permissions to view and change
+      # - state: current_user_id = 99                                          # limits permissions to view and change
+      # - state: current_user_role = administrator                             # limits permissions to view and change
+    # where: # "where" is narrowing, "or_where" is extending 
+      # - state: term = uncategorized
+      # - state: term_parent = offer
+      # - state: term_level = 2
+      # - state: term_ancestor = amazing
+      # - state: term_taxonomy = category
+      # - state: current_user_capability = manage_options                      # limits permissions to view and change
+      # - state: current_user_id = 99                                          # limits permissions to view and change
+      # - state: current_user_role = administrator                             # limits permissions to view and change
+    fields:
+      - type: text
+        name: Notification Email
