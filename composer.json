@@ -1,5 +1,6 @@
 {
     "name": "wolfiesites/yaml-to-wordpress",
+    "version": "1.0.0",
     "description": "Manage wordpress with yaml",
     "keywords": ["wordpress", "plugin", "yaml", "composer", "custom post type", "taxonomy", "post meta", "term meta", "user meta"],
     "homepage": "https://wolfiesites.com",
@@ -16,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Wolfiesites\\": "src/"
+            "Wolfiesites\\": ["src/yaml-to-wordpress/", "src/yaml-to-wordpress/classes/"]
         }
     }
 }
