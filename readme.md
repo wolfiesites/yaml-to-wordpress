@@ -5,11 +5,11 @@ Manage your whole wordpress using single or multiple yaml files.<br>
 ### via composer package
 1. go to ur active theme directory OR custom plugin and run:
 ```
-composer requrie wolfiesites/yaml-to-wordpress
+composer require wolfiesites/yaml-to-wordpress
 ```
 2. load the composer pachage and config file in ur root plugin_file.php or in thme functions.php:
 ```
-// this if prevents from error if u use same composer packages and same versions
+// this if, prevents from error if u use same composer packages and same versions
 if (!class_exists('ComposerAutoloaderInit7c319c193a9312d9a487ea6724a4ee27')) {
   require_once(__DIR__.'/vendor/autoload.php');
 }
