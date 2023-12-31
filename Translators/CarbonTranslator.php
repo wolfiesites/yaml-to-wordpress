@@ -1,5 +1,7 @@
 <?php
-namespace Wolfiesites;
+namespace Wolfiesties\Translators;
+
+use Wolfiesties\Formatters\Text;
 
 class CarbonTranslator {
 
@@ -598,7 +600,7 @@ class CarbonTranslator {
 	    $complexName = $complexField['name'];
 	    $complexField['name'] = self::make_snake_case($prefix . $complexName);
 	    $complexField['label'] = (isset($complexField['label'])) ? $complexField['label'] : self::make_spaces($complexName);
-	    $singular = WolfieFormatter::make_singular($complexName); 
+	    $singular = Text::make_singular($complexName); 
 
         if (isset($complexField['fields']) && is_array($complexField['fields'])) {
 	    	$code = "Field::make('complex', '" . $complexField['name'] . "')";

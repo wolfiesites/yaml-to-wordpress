@@ -1,8 +1,7 @@
 <?php
+namespace Wolfiesties\Translators;
 
-namespace Wolfiesites;
-
-use Wolfiesites\WolfieFormatter;
+use Wolfiesites\Formatters\Text;
 
 class PostTranslator {
 	public static function translate($yaml_content) {
@@ -11,11 +10,11 @@ class PostTranslator {
 
 	        	// more: https://developer.wordpress.org/reference/functions/register_post_type/
 	        	
-	        	$label 					= WolfieFormatter::make_spaces($post_type['name']);
-	        	$plural 				= isset($post_type['plural']) ? $post_type['plural'] : WolfieFormatter::make_plural($label);
-	        	$plural_fl 				= isset($post_type['plural']) ? WolfieFormatter::capitalize_first_letter($post_type['plural']) : WolfieFormatter::capitalize_first_letter(WolfieFormatter::make_plural($label));
+	        	$label 					= Text::make_spaces($post_type['name']);
+	        	$plural 				= isset($post_type['plural']) ? $post_type['plural'] : Text::make_plural($label);
+	        	$plural_fl 				= isset($post_type['plural']) ? Text::capitalize_first_letter($post_type['plural']) : Text::capitalize_first_letter(Text::make_plural($label));
 	        	$singular 				= isset($post_type['singular']) ? $post_type['singular'] : $label;
-	        	$singular_fl 			= isset($post_type['singular']) ? WolfieFormatter::capitalize_first_letter($post_type['singular']) : WolfieFormatter::capitalize_first_letter($label);
+	        	$singular_fl 			= isset($post_type['singular']) ? Text::capitalize_first_letter($post_type['singular']) : Text::capitalize_first_letter($label);
 				$taxonomies 			= isset($post_type['taxonomies']) ? $post_type['taxonomies'] : array();
 				$hierarchical 			= isset($post_type['hierarchical']) ? $post_type['hierarchical'] : false;
 				$archive 				= isset($post_type['has_archive']) ? $post_type['has_archive'] : true;
@@ -93,12 +92,12 @@ class PostTranslator {
 	        }
 
 	        $tax_name = $tax['name'];
-	        $is_plural = WolfieFormatter::is_plural($tax_name);
+	        $is_plural = Text::is_plural($tax_name);
 
-	        $tax_name_plural = isset($tax['plural']) ? $tax['plural'] : ($is_plural ? $tax_name : WolfieFormatter::make_plural($tax_name));
-	        $tax_name_singular = isset($tax['singular']) ? $tax['singular'] : ($is_plural ? WolfieFormatter::make_singular($tax_name) : $tax_name);
-	        $tax_name_plural_fl = WolfieFormatter::capitalize_first_letter($tax_name_plural);
-	        $tax_name_singular_fl = WolfieFormatter::capitalize_first_letter($tax_name_singular);
+	        $tax_name_plural = isset($tax['plural']) ? $tax['plural'] : ($is_plural ? $tax_name : Text::make_plural($tax_name));
+	        $tax_name_singular = isset($tax['singular']) ? $tax['singular'] : ($is_plural ? Text::make_singular($tax_name) : $tax_name);
+	        $tax_name_plural_fl = Text::capitalize_first_letter($tax_name_plural);
+	        $tax_name_singular_fl = Text::capitalize_first_letter($tax_name_singular);
 
 	        $public = isset($tax['public']) ? $tax['public'] : true;
 	        $position_in_menu = isset($tax['position_in_menu']) ? $tax['position_in_menu'] : 1;
@@ -112,7 +111,7 @@ class PostTranslator {
 	        $show_tagcloud = isset($tax['show_tagcloud']) ? $tax['show_tagcloud'] : $public;
 
 	        $category_suffix_singular = (isset($tax['hierarchical']) && $tax['hierarchical']) ? 'Category' : 'Tag' ;
-	        $category_suffix_plural = WolfieFormatter::make_plural($category_suffix_singular);
+	        $category_suffix_plural = Text::make_plural($category_suffix_singular);
 
 	        $tax_name_with_suffix = $tax_name_singular_fl .' '. $category_suffix_plural;
 
@@ -158,7 +157,7 @@ class PostTranslator {
 	                    'description' => 'default term',
 	                ],
 	                'rewrite'                    => isset($tax['rewrite']) ? $tax['rewrite'] : [
-	                    'slug' => $is_plural ? $tax_name : WolfieFormatter::make_plural($tax_name),
+	                    'slug' => $is_plural ? $tax_name : Text::make_plural($tax_name),
 	                ],
 	            ],
 	            $tax['args'] ?? []

@@ -1,8 +1,8 @@
 <?php
 
-namespace Wolfiesites;
+namespace Wolfiesties\Formatters;
 
-class WolfieFormatter {
+class Text {
 
 	// irregular plural words
     private static $irregularPlurals = [

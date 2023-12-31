@@ -4,7 +4,7 @@ namespace Wolfiesites;
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use Symfony\Component\Yaml\Yaml;
-use Wolfiesites\YamlTranslator;
+use Wolfiesites\Translators\YamlTranslator;
 
 // require_once __DIR__ . '/vendor/autoload.php';
 
@@ -17,7 +17,7 @@ class YamlToWp {
 	public function __construct($file_path_to_main_config=__DIR__) {
 		$this->set_path_to_main_config($file_path_to_main_config);
 		$this->set_yaml_content([$file_path_to_main_config]);
-		$this->include_all('classes',['build','built']);
+		// $this->include_all('classes',['build','built']);
 		$this->init();
 	}
 
