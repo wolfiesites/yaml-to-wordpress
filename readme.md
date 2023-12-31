@@ -17,7 +17,7 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
     composer require wolfiesites/yaml-to-wordpress
     ```
 
-2. **Load the composer package and config file in your root `plugin_file.php` or in the `functions.php` file of your theme:**
+2. **Add this to ur main `plugin-file.php` or `functions.php` **
     ```php
     // This if prevents an error if you use the same composer packages and versions
     if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
@@ -30,7 +30,7 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
     ```bash
     touch config.yaml
     ```
-4. **This is a good starter (paste it into your `config.yaml`:**
+4. **This is a good starter point (paste it into your `config.yaml`:**
    - [Example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml)
 
    All examples can be found here:
