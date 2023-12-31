@@ -4,6 +4,7 @@ namespace Wolfiesites;
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use Symfony\Component\Yaml\Yaml;
+use Wolfiesites\YamlTranslator;
 
 // require_once __DIR__ . '/vendor/autoload.php';
 

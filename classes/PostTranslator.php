@@ -2,6 +2,8 @@
 
 namespace Wolfiesites;
 
+use Wolfiesites\WolfieFormatter;
+
 class PostTranslator {
 	public static function translate($yaml_content) {
 	    if (isset($yaml_content) && is_array($yaml_content)) {

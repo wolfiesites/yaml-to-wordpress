@@ -3,6 +3,10 @@
 namespace Wolfiesites;
 
 use Symfony\Component\Yaml\Yaml;
+// use Wolfiesites\WolfieFormatter;
+use Wolfiesites\CarbonTranslator;
+use Wolfiesites\PostTranslator;
+use Wolfiesites\SidebarTranslator;
 
 class YamlTranslator {
 	protected $yaml_content;
