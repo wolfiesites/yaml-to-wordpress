@@ -12,6 +12,7 @@
         }
     ],
     "require": {
+        "php": ">=7.4",
         "htmlburger/carbon-fields": "^3.6",
         "symfony/yaml": "^5.4"
     },
