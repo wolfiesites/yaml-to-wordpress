@@ -3,6 +3,7 @@ namespace Wolfiesites\Translators;
 
 use Wolfiesites\Formatters\Text;
 
+if (!class_exists('Wolfiesites\Translators\PostTranslator')) {
 class PostTranslator {
 	public static function translate($yaml_content) {
 		if (isset($yaml_content) && is_array($yaml_content)) {
@@ -193,4 +194,5 @@ class PostTranslator {
 			$position_in_menu,
 		);
 	}
+}
 }

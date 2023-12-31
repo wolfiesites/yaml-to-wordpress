@@ -8,6 +8,7 @@ use Wolfiesites\Translators\YamlTranslator;
 
 // require_once __DIR__ . '/vendor/autoload.php';
 
+if (!class_exists('Wolfiesites\YamlToWp')) {
 class YamlToWp {
 	protected $main_config_path;
 	protected $other_configs = [];
@@ -195,7 +196,7 @@ class YamlToWp {
 
 	}
 }
-
+}
 // example of use:
 // $yaml_to_wordpress = new YamlToWp(__DIR__.'/index.yaml');
 // $yaml_to_wordpress->add_config(__DIR__.'/two.yaml');

@@ -3,6 +3,7 @@ namespace Wolfiesites\Translators;
 
 use Wolfiesites\Formatters\Text;
 
+if (!class_exists('Wolfiesites\Translators\CarbonTranslator')) {
 class CarbonTranslator {
 
     public static function translate_post_meta($yaml_content) {
@@ -658,4 +659,5 @@ class CarbonTranslator {
         return implode(', ', $quotedWords);
     }
 
+}
 }

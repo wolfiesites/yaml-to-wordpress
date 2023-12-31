@@ -6,6 +6,7 @@ use Wolfiesites\Translators\CarbonTranslator;
 use Wolfiesites\Translators\PostTranslator;
 use Wolfiesites\Translators\SidebarTranslator;
 
+if (!class_exists('Wolfiesites\Translators\YamlTranslator')) {
 class YamlTranslator {
 	protected $yaml_content;
 
@@ -75,4 +76,5 @@ class YamlTranslator {
 
 		return $outputArray;
 	}
+}
 }

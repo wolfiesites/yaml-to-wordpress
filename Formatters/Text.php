@@ -2,6 +2,8 @@
 
 namespace Wolfiesites\Formatters;
 
+
+if (!class_exists('Wolfiesites\Formatters\Text')) {
 class Text {
 
 	// irregular plural words
@@ -154,4 +156,5 @@ class Text {
         $camelCase = lcfirst(self::to_pascal_case($string));
         return $camelCase;
     }
+}
 }
