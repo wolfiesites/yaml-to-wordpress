@@ -30,7 +30,10 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
     ```bash
     touch config.yaml
     ```
-4. **This is a good starter point (paste it into your `config.yaml`:**
+4. **This is a good starter point (paste it into your `config.yaml`: (optional)**
+    ```bash
+    curl -sSL "https://raw.githubusercontent.com/wolfiesites/yaml-to-wordpress/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml" >> config.yaml
+    ```
    - [Example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml)
 
    All examples can be found here:
