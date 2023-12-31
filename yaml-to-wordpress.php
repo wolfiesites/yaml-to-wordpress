@@ -5,7 +5,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use Symfony\Component\Yaml\Yaml;
 
-require_once __DIR__ . '/vendor/autoload.php';
+// require_once __DIR__ . '/vendor/autoload.php';
 
 class YamlToWp {
 	protected $main_config_path;
