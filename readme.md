@@ -10,7 +10,7 @@ composer require wolfiesites/yaml-to-wordpress
 2. load the composer pachage and config file in ur root plugin_file.php or in thme functions.php:
 ```
 // this if, prevents from error if u use same composer packages and same versions
-if (!class_exists('ComposerAutoloaderInit7c319c193a9312d9a487ea6724a4ee27')) {
+if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
   require_once(__DIR__.'/vendor/autoload.php');
 }
 new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
