@@ -2,36 +2,27 @@
 Manage your whole wordpress using single or multiple yaml files.<br>
 
 ## How to install?
-Choose one option:
-* as composer package (recommended)<br>
-  it allows you to incorporate it into ur new custom plugin or custom theme.<br>
-  Then within ur plugin u load all dependencies and can use settings pages and all. Manage wordpress.
-* as wordpress plugin<br>
-  it quickly grants u ability to specify single yaml file (either in active theme or plugin)<br>
-  and manage wordpress via this single .yaml file
-
-### via composer package (recommended)
+### via composer package
 1. go to ur active theme directory OR custom plugin and run:
 ```
 composer requrie wolfiesites/yaml-to-wordpress
 ```
-2. load the composer pachage and config file:
+2. load the composer pachage and config file in ur root plugin_file.php or in thme functions.php:
 ```
- require_once(__DIR__.'/vendor/autoload.php');
- $yaml_to_wordpress = new YamlToWp(__DIR__.'/config.yaml');
- $yaml_to_wordpress->add_config(__DIR__.'/another_config.yaml');
+// this if prevents from error if u use same composer packages and same versions
+if (!class_exists('ComposerAutoloaderInit7c319c193a9312d9a487ea6724a4ee27')) {
+  require_once(__DIR__.'/vendor/autoload.php');
+}
+new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
 ```
 3. create config.yaml
 4. paste ur configuration of wordpress to that file :)<br>
-   examples can be found here:<br> <https://gitlab.com/pw-wp-plugins/yaml-to-wordpress/-/tree/master/examples/6.%20mix_of_examples?ref_type=heads>
+   this is good starter (just paste it to ur config.yaml):<br>
+   <https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml> <br><br>
+   all examples can be found here:<br>
+  <https://gitlab.com/pw-wp-plugins/yaml-to-wordpress/-/tree/master/examples/6.%20mix_of_examples?ref_type=heads>
 5. adjust and enjoy :)
 
-
-### via wordpress plugin
-1. install plugin yaml-to-wordpress via wordpress
-2. in ur active theme create `config.yaml`
-3. paste ur configuration of wordpress to that file :)<br>
-   examples can be found here:<br> <https://gitlab.com/pw-wp-plugins/yaml-to-wordpress/-/tree/master/examples/6.%20mix_of_examples?ref_type=heads>
 
 ## documentation:
 <https://gitlab.com/pw-wp-plugins/yaml-to-wordpress/-/tree/master/examples?ref_type=heads>

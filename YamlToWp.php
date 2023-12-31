@@ -6,7 +6,6 @@ use Carbon_Fields\Field;
 use Symfony\Component\Yaml\Yaml;
 use Wolfiesites\Translators\YamlTranslator;
 
-// require_once __DIR__ . '/vendor/autoload.php';
 
 if (!class_exists('Wolfiesites\YamlToWp')) {
 class YamlToWp {
