@@ -7,7 +7,7 @@ Manage your whole wordpress using single or multiple yaml files.<br>
 ```
 composer require wolfiesites/yaml-to-wordpress
 ```
-2. load the composer pachage and config file in ur root plugin_file.php or in thme functions.php:
+2. load the composer package and config file in ur root plugin_file.php or in thme functions.php:
 ```
 // this if, prevents from error if u use same composer packages and same versions
 if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
@@ -22,7 +22,17 @@ new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
    all examples can be found here:<br>
   <https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples>
 5. adjust and enjoy :)
-
+### want to load anothrconfig.yaml file?
+instead of first configuration u can paste below:
+```
+// this if, prevents from error if u use same composer packages and same versions
+if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
+  require_once(__DIR__.'/vendor/autoload.php');
+}
+$plugin_prefix_y2wp = new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
+$plugin_prefix_y2wp->add_config(__DIR__.'/two.yaml');
+```
+You can add as many config.yaml files as u like!
 
 ## documentation:
 <https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples>
