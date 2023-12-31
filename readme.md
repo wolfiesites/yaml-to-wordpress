@@ -23,9 +23,9 @@ new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
 ```
 3. create config.yaml
 4. this is good starter (just paste it to ur config.yaml):<br>
-   [example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml>)<br><br>
+   [example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml)<br><br>
    all examples can be found here:<br>
-  [all examples](https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples>)
+  [all examples](https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples)
 5. adjust and enjoy :)
 
 ### want to load another config.yaml file?
