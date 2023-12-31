@@ -45,8 +45,8 @@ instead of first configuration u can paste below:
 if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
   require_once(__DIR__.'/vendor/autoload.php');
 }
-$plugin_prefix_y2wp = new Wolfiesites\YamlToWp(__DIR__ .'/another.yaml');
-$plugin_prefix_y2wp->add_config(__DIR__.'/two.yaml');
+$plugin_prefix_y2wp = new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
+$plugin_prefix_y2wp->add_config(__DIR__.'/another.yaml');
 ```
 You can add as many config.yaml files as u like!
 
