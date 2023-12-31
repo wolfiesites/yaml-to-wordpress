@@ -20,12 +20,12 @@ new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
    this is good starter (just paste it to ur config.yaml):<br>
    <https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml> <br><br>
    all examples can be found here:<br>
-  <https://gitlab.com/pw-wp-plugins/yaml-to-wordpress/-/tree/master/examples/6.%20mix_of_examples?ref_type=heads>
+  <https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples>
 5. adjust and enjoy :)
 
 
 ## documentation:
-<https://gitlab.com/pw-wp-plugins/yaml-to-wordpress/-/tree/master/examples?ref_type=heads>
+<https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples>
 
 
 
