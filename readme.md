@@ -1,5 +1,9 @@
 # yaml to wordpress
-Manage your whole wordpress using single or multiple yaml files.<br>
+Manage your whole wordpress using single or multiple yaml files. You can:<br>
+* make settings pages 
+* regsiter custom post types
+* register custom taxonomies
+* add metaboxes for: post_meta, user_meta, term_meta, comment_meta
 
 ## How to install?
 ### via composer package
@@ -16,12 +20,12 @@ if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
 new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
 ```
 3. create config.yaml
-4. paste ur configuration of wordpress to that file :)<br>
-   this is good starter (just paste it to ur config.yaml):<br>
-   <https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml> <br><br>
+4. this is good starter (just paste it to ur config.yaml):<br>
+   [example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml>)<br><br>
    all examples can be found here:<br>
-  <https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples>
+  [all examples](https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples>)
 5. adjust and enjoy :)
+
 ### want to load anothrconfig.yaml file?
 instead of first configuration u can paste below:
 ```
