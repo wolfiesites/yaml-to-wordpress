@@ -1,6 +1,6 @@
 <?php
 
-namespace Wolfiesties\Formatters;
+namespace Wolfiesites\Formatters;
 
 class Text {
 
