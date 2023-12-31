@@ -1,7 +1,7 @@
 # yaml to wordpress
 Manage your whole wordpress using single or multiple yaml files. You can:<br>
 * make settings pages 
-* regsiter custom post types
+* register custom post types
 * register custom taxonomies
 * add metaboxes for: post_meta, user_meta, term_meta, comment_meta
 <br>
