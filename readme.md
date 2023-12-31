@@ -4,6 +4,8 @@ Manage your whole wordpress using single or multiple yaml files. You can:<br>
 * regsiter custom post types
 * register custom taxonomies
 * add metaboxes for: post_meta, user_meta, term_meta, comment_meta
+<br>
+tip: you can reinstall and use it in all ur seperate wordpress plugins and themes.
 
 ## How to install?
 ### via composer package
