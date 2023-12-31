@@ -1,6 +1,6 @@
 {
     "name": "wolfiesites/yaml-to-wordpress",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Manage wordpress with yaml",
     "keywords": ["wordpress", "plugin", "yaml", "composer", "custom post type", "taxonomy", "post meta", "term meta", "user meta"],
     "homepage": "https://wolfiesites.com",
