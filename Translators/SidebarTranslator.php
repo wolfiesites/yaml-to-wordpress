@@ -1,5 +1,5 @@
 <?php
-namespace Wolfiesties\Translators;
+namespace Wolfiesites\Translators;
 
 class SidebarTranslator {
 	public static function translate($yaml_content) {

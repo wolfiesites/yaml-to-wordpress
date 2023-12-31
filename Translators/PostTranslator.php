@@ -1,5 +1,5 @@
 <?php
-namespace Wolfiesties\Translators;
+namespace Wolfiesites\Translators;
 
 use Wolfiesites\Formatters\Text;
 

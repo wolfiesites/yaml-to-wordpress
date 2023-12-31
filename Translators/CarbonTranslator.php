@@ -1,7 +1,7 @@
 <?php
-namespace Wolfiesties\Translators;
+namespace Wolfiesites\Translators;
 
-use Wolfiesties\Formatters\Text;
+use Wolfiesites\Formatters\Text;
 
 class CarbonTranslator {
 

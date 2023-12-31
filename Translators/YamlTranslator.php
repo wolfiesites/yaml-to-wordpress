@@ -1,5 +1,5 @@
 <?php
-namespace Wolfiesties\Translators;
+namespace Wolfiesites\Translators;
 
 use Symfony\Component\Yaml\Yaml;
 use Wolfiesites\Translators\CarbonTranslator;
