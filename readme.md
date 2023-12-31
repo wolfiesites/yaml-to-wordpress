@@ -7,26 +7,34 @@ Manage your whole wordpress using single or multiple yaml files. You can:<br>
 <br>
 tip: you can reinstall and use it in all ur seperate wordpress plugins and themes.
 
-## How to install?
+## requirement
+* php >= 7.4
+
+## how to install?
 ### via composer package
-1. go to ur active theme directory OR custom plugin and run:
-```
-composer require wolfiesites/yaml-to-wordpress
-```
-2. load the composer package and config file in ur root plugin_file.php or in thme functions.php:
-```
-// this if, prevents from error if u use same composer packages and same versions
-if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
-  require_once(__DIR__.'/vendor/autoload.php');
-}
-new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
-```
-3. create config.yaml
-4. this is good starter (just paste it to ur config.yaml):<br>
-   [example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml)<br><br>
-   all examples can be found here:<br>
-  [all examples](https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples)
-5. adjust and enjoy :)
+1. **Go to your active theme directory or custom plugin and run:**
+    ```bash
+    composer require wolfiesites/yaml-to-wordpress
+    ```
+
+2. **Load the composer package and config file in your root `plugin_file.php` or in the `functions.php` file of your theme:**
+    ```php
+    // This if prevents an error if you use the same composer packages and versions
+    if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
+        require_once(__DIR__.'/vendor/autoload.php');
+    }
+    new Wolfiesites\YamlToWp(__DIR__ .'/config.yaml');
+    ```
+
+3. **Create `config.yaml`**
+
+4. **This is a good starter (paste it into your `config.yaml`):**
+   - [Example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml)
+
+   All examples can be found here:
+   - [All examples](https://github.com/wolfiesites/yaml-to-wordpress/tree/main/examples/6.%20mix_of_examples)
+
+5. **Adjust and enjoy! :)**
 
 ### want to load another config.yaml file?
 instead of first configuration u can paste below:
