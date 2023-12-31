@@ -17,7 +17,7 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
     composer require wolfiesites/yaml-to-wordpress
     ```
 
-2. **Add this to ur main `plugin-file.php` or `functions.php` **
+2. **Add this to ur main `plugin-file.php` or `functions.php`**
     ```php
     // This if prevents an error if you use the same composer packages and versions
     if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
