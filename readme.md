@@ -11,7 +11,7 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
 * php >= 7.4
 
 ## how to install?
-### via composer package
+## via composer package
 1. **Go to your active theme directory or custom plugin and run:**
     ```bash
     composer require wolfiesites/yaml-to-wordpress
@@ -27,8 +27,10 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
     ```
 
 3. **Create `config.yaml`**
-
-4. **This is a good starter (paste it into your `config.yaml`):**
+    ```bash
+    touch config.yaml
+    ```
+4. **This is a good starter (paste it into your `config.yaml`:**
    - [Example: config.yaml](https://github.com/wolfiesites/yaml-to-wordpress/blob/main/examples/6.%20mix_of_examples/books__cpt_with_post_meta%2Btaxonomies/config.yaml)
 
    All examples can be found here:
@@ -36,9 +38,9 @@ tip: you can reinstall and use it in all ur seperate wordpress plugins and theme
 
 5. **Adjust and enjoy! :)**
 
-### want to load another config.yaml file?
+## want to load another config.yaml file?
 instead of first configuration u can paste below:
-```
+```php
 // this if, prevents from error if u use same composer packages and same versions
 if (!class_exists('ComposerAutoloaderInit228a8406a34a58cdfa0baa1563d5478e')) {
   require_once(__DIR__.'/vendor/autoload.php');
