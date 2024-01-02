@@ -1,7 +1,7 @@
 {
     "name": "wolfiesites/yaml-to-wordpress",
     "version": "1.0.0",
-    "description": "Manage wordpress with yaml",
+    "description": "Manage wordpress with yaml. Create settings page, metaboxes for all posts, register custom post types and custom taxonomies. Use it in all ur plugin or theme.",
     "keywords": ["wordpress", "plugin", "yaml", "composer", "custom post type", "taxonomy", "post meta", "term meta", "user meta"],
     "homepage": "https://wolfiesites.com",
     "license": "MIT",
