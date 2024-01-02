@@ -67,7 +67,7 @@ You can add as many config.yaml files as u like!
 wihtout those three amazing packages it wouldn't be possible.
 
 
-## consider donation:
+## support me:
 This plugin has to be GPL cause of wordpress restrictions but PLEASE consider it as MIT.<br>
 If u build on top of it, IT is greatly advisable to mention authors of all the packages.<br>
 you may buy me a coffe soon here: <https://wolfiesites.com>
